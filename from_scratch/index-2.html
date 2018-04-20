@@ -1,0 +1,97 @@
+<html>
+    <head></head>
+    <body>
+        example1: <div id="example1"></div>
+        example2: <div id="example2"></div>
+        example3: <div id="example3"></div>
+        example4: <div id="example4"></div>
+        example5: <div id="example5"></div>
+        example6: <div id="example6"></div>
+        example7: <div id="example7"></div>
+        example8: <div id="example8"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+        <script type="text/babel">
+        /* EXAMPLE 1: what's JSX & how to render it
+         */
+        const jsxElement1 = <h1> This is JSX Magic! </h1>
+
+        ReactDOM.render(
+            jsxElement1,
+            document.getElementById('example1')
+        );
+
+
+        /* EXAMPLE 2: JSX can be multiline: 
+         * uncomment following lines, change the text & render it 
+         * in example2 div
+         */
+        // const jsxElement2 = (
+        //     <div>
+        //         <h1>Hello World </h1>
+        //     </div>
+        // )
+
+
+        /* EXAMPLE 3: try to render this one. Do you know why it's breaking? Fix it! 
+         */
+        // const jsxElement3 = (
+        //     <h1> Hi Adas!</h1>
+        //     <h2> How's it going? </h2>
+        // )
+
+
+        /* EXAMPLE 4: one of the advantage of JSX is that you can execute JS inline. 
+         * Take a look at the example below. Show the proper result of the second line.
+         * Render it.
+         */
+        // const jsxElement4 = (
+        //     <div>
+        //         <p>2 + 2 = {2 + 2}</p>
+        //         <p>4 - 4 = 4 - 4</p>
+        //     </div>
+        // )
+
+        /* EXAMPLE 5: Not only numbers, but variables can be evaluated too. change the variable name 
+         * and see what happens. Why Saturday hasn't been rendered?
+         */
+        // const name = "Ada"
+        // const weekDay = "Saturday"
+        // const jsxElement5 = (
+        //     <p>Hello {name}, today is weekDay</p>
+        // )
+
+
+        /* EXAMPLE 6: You can treat jsx as any other object in JS, e.g. store it in object. 
+         * Add couple of positions in an array and render them inside the `jsxElement6`
+         */
+        // const namesLi = [
+        //     <li>Ana</li>,
+        //     <li>Agnes</li>
+        // ]
+        // const jsxElement6 = (
+        //     <ul>
+                
+        //     </ul>
+        // )
+
+
+        /* EXAMPLE 7: You can add attributes as in HTML. You can evaluate them too. 
+         * Add attribute `src` to the image with a value of `imgSrc` variable
+         */
+        // const imgSrc = `http://placekitten.com/200/300`
+        // const jsxElement7 = <img/>
+
+
+
+        /* EXAMPLE 8: You can execute functions too
+         * Add attribute `onClick` to `jsxElement8` and exectute function 
+         */
+        // const sayHello = ()=>{alert("Hello!")}
+        // const jsxElement8 = <div>Hello!</div>
+    
+
+        </script>
+</body>
+</html>
