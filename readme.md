@@ -1,31 +1,31 @@
-# Ada React Workshop file initial instruction
+# Ada React Workshop file JSX & Modules
 
-## STEP 1: Instructions for running the environment
+## STEP 1: What's a JSX?
 
-1. Make sure you have those things installed by typing in your terminal:
-- node
-- npm
-- yarn
-2. Go to chosen directory for a project:
-`cd /c/user/my_projects`
-3. Clone this repository there:
-`https://github.com/mbondyra/ada-react-workshop`
-4. Install all the dependencies with:
-`yarn`
-5. Run your project with:
-`yarn start`
-6. You can view your project under `https://localhost:8000`. Any change you'll do will be automatically updated in the browser.
+So you have the basic idea of what's JSX - an XML-like syntax extension of JavaScript. It means that you can basically write HTML in Javascript. It's a great feature of React because it helps with readability. There are some differences though.
 
-## STEP 2: Get to know the project structure: Modify content, styles and JS
+## STEP 2: Differences between HTML & JSX
+
+1. Run the app as before (`yarn start`) and take a look at the three divs you have in a `App-content` container. Modify the looks of the divs. 
+HINT: Remember that:
+- styles in JSX should be written as objects so eg.
+`style="color: black"` becomes `style={{color: 'black'}}`
+- class is a reserved word in Javascript, we use it to CREATE a class, so it cannot be used in JSX. That's why instead we have className.
+- id stays id and it works exactly the same way as in HTML.
+
+## STEP 3: Modularize your app
+
+One of the biggest advantages of React is that it's very easy to modularize your app. 
+1. Take a look at a file `Header.js` and compare it to the lines #11-14 of `App.js` file.
+2. Replace lines #11-14 with this file.
+    2.1. Import a file with 
+        `import Header from 'Header'`
+    2.2. Replace lines 11-14 with `<Header />`
+    2.3. Take a look at imports in `App.js` file. It looks like one is not being used - remove it.
+3. Extract `App-content` the same way. Create a new file basing on `Header.js` and repeat operations from #2.
  
-1. Change the main title 'Hello world' to 'Hello Ada.js'
-2. Based on imports in the file App.js guess which file contains csses. Play with the colors; change the color of the background 
-3. Notice how the file imports image 'react-logo.svg'. There's one more image file in your repository: find it and replace `react-logo.svg` with it.  
+## STEP 4: Switch branch to go to the next exercise
 
-## STEP 3: Switch branch to go to the next exercise
-
-1. To display the updated instruction, go to the branch `task-2` in github. The instruction (coming from the readme file) will be updated.
-2. Checkout branch in your local repository (you can stash your changes before) `git checkout task-2`
+1. To display the updated instruction, go to the branch `task-3` in github. The instruction (coming from the readme file) will be updated.
+2. Checkout branch in your local repository (you can stash your changes before) `git checkout task-3`
 3. The branch content is updated. 
-
-##Want more info about this project structure? It's simple create-react-app 

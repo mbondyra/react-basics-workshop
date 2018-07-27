@@ -12,8 +12,11 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Hello World</h1>
         </header>
-        <p className="App-intro">
+        <p className="App-content">
           I'm so happy to be here with you :)
+          <div>Change the background of this container to black with inline styles</div>
+          <div>Change the background of this container to black with targetting by class</div>
+          <div>Cchange the background of this container to black with targetting by id</div>
         </p>
       </div>
     );
