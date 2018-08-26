@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import App from './task-1/App'
+import App from './App'
 
 /* Do you remember this bit?
  * The first Parameter is JSX that we want to put into HTML,

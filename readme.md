@@ -1,17 +1,31 @@
-# Ada React Workshop file JSX & Modules
+# Ada React Workshop Create-react-app
 
-## STEP 1: Modularize your app
+## STEP 1: Instructions for running the environment
 
-One of the biggest advantages of React is that it's very easy to modularize your app. 
-1. Take a look at a file `Header.js` and compare it to the lines #13-19 of `App.js` file.
-2. Replace lines #13-19 with this file.
-    2.1. Import a file with 
-        `import Header from 'Header'`
-    2.2. Replace lines 13-19 with `<Header />`
-    2.3. Take a look at imports in `App.js` file. It looks like some are not being used as now they are used in `Header.js` file- remove tem.
-3. Extract `App-content` the same way. Create a new file based on `Header.js` called `Content.js` and repeat operations from #2.
-4. 
+    1. Make sure you have those things installed by typing in your terminal:
+        - node
+        - yarn
 
-## STEP 2: What's a JSX? (Slide) Differences between HTML & JSX
+    2. Install all the dependencies with: `yarn`
 
-So you have the basic idea of what's JSX - an XML-like syntax extension of JavaScript. It means that you can basically write HTML in Javascript. It's a great feature of React because it helps with readability. There are some differences though. Take a look a the slide :)
+    3. Run your project with: `yarn start`
+
+    4. You can view your project under `https://localhost:3000`. Any change you'll do will be automatically updated in the browser.
+
+## STEP 2: Let's talk about the structure of the files
+
+    1. That's a small break for explanation of Create-react-app boilerplate :)
+
+## STEP 3: Get to know the project structure: Modify content, styles and JS
+
+    1. Add your name in the main title `A letter to...`
+    2. Based on imports in the file App.js guess which file contains csses. Play with the colors; change the color of the background of the object of class `App-bg` to see the hidden message.
+    3. Once you reveal the hidden message, follow the instruction the message contains.
+
+## STEP 4: Switch branch to go to the next exercise
+
+    1. To display the updated instruction, go to the branch `1_and_3/4-the-letter-extracting-modules` in github. The instruction (coming from the readme file) will be updated.
+    2. Checkout branch in your local repository (you can stash your changes before) `git checkout 1_and_3/4--the-letter-extracting-modules`
+    3. The branch content is updated.
+
+## Want more info about this project structure? It's simple create-react-app boilerplate. Google it :)
