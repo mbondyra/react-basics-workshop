@@ -1,0 +1,71 @@
+/* and here we're modifying csses: */
+
+.Ada-logo {
+  margin-right: 10px;
+  right: 0;
+  position: absolute;
+  top: 15px;
+  filter: grayscale(100%);
+}
+
+.App-logo {
+  height: 30px;
+  margin: 0 0px 0 10px;
+  vertical-align: middle;
+  filter: grayscale(100%);
+}
+
+.App-header {
+  text-align: left;
+  background-color: #33080b;
+  height: 60px;
+  padding: 5px 30px;
+  letter-spacing: 1px;
+  color: white;    
+  z-index: 1;
+  position:relative;
+  box-shadow: -2px -3px 2px 4px rgba(0,0,0,0.75);
+
+}
+
+
+.App-header h1{
+  position: relative;
+  font-size: 16px;
+  margin: 0;
+  margin-right: 0px;
+  line-height: 60px;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.App-bg {
+  margin: 0;
+  min-height: 50vh;
+  background: #52201f;
+  padding: 20px;
+}
+.App-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title{    
+  color: white;
+  padding: 5px;
+  font-size: 20px;
+} 
+
+.message {
+  color: #52201f;
+  padding-bottom: 15px;
+}
+
+.letter {
+  max-width: 40vw;
+  max-height: 50vh;
+}
