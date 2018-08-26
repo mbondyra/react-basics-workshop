@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Crimson Text", serif;
+  background: #e8e8e4;
+  min-height: 100vh;
+  color: white;
+}
