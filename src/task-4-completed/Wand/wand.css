@@ -1,0 +1,21 @@
+.wandContainer {
+  position: absolute;
+  bottom: -5vw;
+  right: -8vw;
+}
+
+.wand{
+  transform: rotate(55deg);
+  transition: transform 0.5s ease-in;    
+  width: 60vw;
+}
+
+.wandActive {
+  transform: rotate(69deg);
+}
+
+.confetti {
+  position: fixed;
+  right: -4vw;
+  bottom: 30vw;
+}

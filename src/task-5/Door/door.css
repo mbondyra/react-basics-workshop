@@ -1,0 +1,43 @@
+.wholeDoor {    
+  background: url("./border.png") center ;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 274px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 147px;
+  margin: 20px auto;
+  margin-left: 0px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  z-index:2;
+}
+
+.door {
+  background: url("./door.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 147px;
+  height: 274px;
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 3px;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0) inset;
+  transition: 1s transform linear;
+  transform-origin: left;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.doorOpen {
+  transform: rotateY(-90deg);
+  transform-origin: 8px;
+  transition: 0.5s linear;
+}
+
+@keyframes go {
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}

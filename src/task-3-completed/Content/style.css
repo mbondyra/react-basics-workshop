@@ -1,0 +1,28 @@
+
+/*content csses*/
+.App-intro {
+  font-size: large;
+}
+
+.App-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.title{    
+  color: white;
+  padding: 5px;
+  font-size: 30px;
+} 
+
+.message {
+  padding-bottom: 15px;
+}
+
+.letter {
+  max-width: 40vw;
+  max-height: 50vh;
+}

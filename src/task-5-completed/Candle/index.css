@@ -1,0 +1,95 @@
+.candle {
+  position: relative;
+  width: 100px;
+  top: 80px;
+  height: 180px;
+  background: url(./candle.png) center no-repeat;
+  background-size: contain;
+  z-index:0;    
+  margin: 0 auto;
+  transition: transform 0.5s ease-in;
+}
+
+.candleFallen {
+  transform: translateY(-80px);
+}
+
+.flame {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-radius: 40%;
+  animation: jetflameanim 1s infinite;
+  filter: blur(2px);
+  background-image: radial-gradient(
+      ellipse at bottom,
+      #c80000 0%,
+      #c80000 10%,
+      rgba(200, 0, 0, 0) 70%,
+      rgba(200, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+      ellipse at bottom,
+      red 0%,
+      red 10%,
+      rgba(255, 0, 0, 0) 60%,
+      rgba(255, 0, 0, 0) 100%
+    );
+  background-repeat: no-repeat;
+}
+.flame:before,
+.flame:after {
+  position: absolute;
+  content: "";
+  bottom: inherit;
+  left: inherit;
+  border-radius: inherit;
+  animation: inherit;
+  background-repeat: inherit;
+}
+
+.flame:before {
+  height: 65%;
+  width: 70%;
+  left: 15%;
+  -webkit-animation-duration: 1.1s;
+  animation-duration: 1.1s;
+  background-image: radial-gradient(
+    ellipse at bottom,
+    yellow 0%,
+    yellow 10%,
+    rgba(255, 255, 0, 0) 70%,
+    rgba(255, 255, 0, 0) 100%
+  );
+}
+
+.flame:after {
+  height: 65%;
+  width: 70%;
+  left: 15%;
+  -webkit-animation-duration: 1.1s;
+  animation-duration: 1.1s;
+  background-image: radial-gradient(
+    ellipse at bottom,
+    yellow 0%,
+    yellow 10%,
+    rgba(255, 255, 0, 0) 70%,
+    rgba(255, 255, 0, 0) 100%
+  );
+}
+
+.flameWrapper {
+  margin: 1em auto;
+  position: relative;
+  height: 50px;
+  width: 30px;
+  transition: all 1s ease-in;
+  margin-top: -1vw;
+  right: -0.7vw;
+}
+.flameWrapperOff {
+  height: 0;
+  width: 0;
+}

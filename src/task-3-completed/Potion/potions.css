@@ -1,0 +1,28 @@
+.potion {
+  width: 15vw;
+  display: inline-block;
+  position: relative;
+}
+
+.potion img {
+  width: 100%;
+}
+
+.liquid {
+  position: absolute;
+  width: 78%;
+  height: 8.4vw;
+  background: red;
+  top: 9.9vw;
+  left: 1.6vw;
+}
+
+.label {
+  position: absolute;
+  top: 56%;
+  transform: translateX(-50%);
+  background: #ffffff73;
+  color: black;
+  left: 50%;
+  width: 60%;
+}
