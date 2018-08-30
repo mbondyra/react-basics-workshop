@@ -1,47 +1,74 @@
-# Ada React Workshop file initial instruction
+# Ada React Workshop file JSX & Modules
 
-## STEP 1: Open index.html file
+## STEP 1: Fix the repo
 
-1. Add necessary scripts to from_scratch/index.html file.
+1. Looks like something is not right... The repo is not displaying. That's because in a `Wand` component we're using module that needs to be installed. Run `yarn` one more time in your terminal.
 
-```javascript
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+2. Ok, so now you should see a Wand and a Door... You see when we're going with it, don't you? Display alert message 'alohomora' when clicking on a wand.
+
+3. Message is cool, but let's just open/close the door for real. To do that, you need to modify your content class to add initial state in a constructor:
+
+
+```
+class App extends Component {
+  constructor(){
+      super(); //that's invoking parent (Component) constructor
+      this.state ={
+          isDoorOpen: false
+      }
+  }  
+  render() {
+    return (
+      <div className="App-content">
+        <Welcome who="Ada" messageColor="#fff" />
+        <Door />
+        <div>
+          <Wand />
+        </div>
+      </div>
+    );
+  }
+}
 ```
 
-First one allows you to use React. 
-The second one adds ReactDOM - it's a glue between React and a browser - allows you to render React elements on your page. 
-The third one, babel, allows you to use modern syntax of ES6 directly in a browser.
-
-2. Once you loaded your scripts, add a custom `script` tag below where our examples will live. TO be compiled by babel, you need to add an attribute `type="text/babel"`
-
-```javascript
-    <script type="text/babel">
-        // your app
-    </script>
+After that, the state needs to be read by the door, so we can pass the state as prop to the door. 
+```
+<Door isOpen={this.state.isDoorOpen}>
 ```
 
-3. Create your own JSX element in the script tag, it can be either `<h1/>`, `<div/>` or whatever you prefer. Put your name in the element. Assign it to the variable. You have an example below:
+The only thing left is to change THE STATE of the door on CLicking the wand, we need to use `setState` for it:
 
-```javascript
-    <script type="text/babel">
-        const myName = <h1> I am Marta </h1>
-    </script>
+```
+render() {
+    return (
+    <div className="App-content">
+        <Welcome who="Ada" messageColor="#fff" />
+        <Door />
+        <div onClick={()=> {this.setState(isDoorOpen: true)}}>
+            <Wand />
+        </div>
+    </div>
+    );
+}
 ```
 
-4. Run the app in your browser. So far, nothing happened. That's because we need to render it in the browser first! You need to use `ReactDOM.render` method that has two params: JSX element to render and the element from your DOM tree that will be parent of our object. Take a look at our HTML - there's an element with id `#example1` - let's mount it there!
+This would allow us to open the door once. If we want to toggle the state of it, we can switch it from `<div onClick={()=> {this.setState(isDoorOpen: true)}}>` to  `<div onClick={()=> {this.setState(isDoorOpen: !this.state.isDoorOpen)}}>`. The `!` will negate the previous state.
+
+4. Do you remember the confetti module that was breaking? Now that it's working, let's have some fun! Add prop: `spellCasting` to the <Wand /> with a value of `this.state.doorOpen`. Try it in a browser.
+
+
+5. So you get the basic idea of a state. Great! Let's add some more events to practice. Add state `wandRaised` to our constructor:
 
 ```javascript
-    <script type="text/babel">
-        const myName = <h1> I am Marta </h1>
-        ReactDOM.render(
-            myName,
-            document.getElementById("example1")
-        );
-    </script>
+this.state = {
+  doorOpen: false,
+  wandRaised: false
+}
 ```
 
-5. It is THAT simple to use React. Let's go a bit deeper with rules that are applied to JSX. Open index-2.html file and start with exercises there. Once you solve one, uncomment line comments of the next one. We're here if you need help :)
+Add two more listeners to the div surrounding wand. `onMouseEnter={()=>{this.setState(wandRaised: true)}}` will cause raising a wand a bit. Add the same thing for `onMouseLeave` but with changing the value of state to `false`.
+Pass prop `raised` to <Wand /> with a value of `this.state.wandRaised`.
 
-6. Once you finished, wait for a checkpoint and switch to the next branch called `2_the_letter`, we'll start the real fun now. I cannot wait!
+6. Let's now go into the Wand component. The Wand is a function - it is not a class extending a component as the previous ones. Isn't it weird? Do you know the reason why? (Slide)
+
+7. Once your door toggle and confetti gets triggered and a wand is going up and down AND you know what's stateless component, you're ready to go next :)
