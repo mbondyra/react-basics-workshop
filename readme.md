@@ -1,7 +1,6 @@
-## 1 THIS SHOULD BE EASY
+##1 get data from API
 
-1. Basing on working button `Alohomora`, make the other button work - you need to toggle position of candle and if it is fired or not. Go to a file `Candle/index.js` and check what props the candle expects. 
-
-2. Come back to `Content/index.js` file and pass props as constants (e.g. fired=false, up=true). Check out all the cases
-
-3. Add extra states to Content Component and make buttons work! :)
+1. Check out `ComponentDidMount` method - the API call will execute after component will be created and mounted on the page.
+2. It's time to install React Dev Tools extension in your browser - do it! :)
+3. Check out the state of the <App/> Component.
+4. Replace constants from the `render()` method with the values you'll calculate. Hint: use methods like `map`, `filter` or array property: `.length`
