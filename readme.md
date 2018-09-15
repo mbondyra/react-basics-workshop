@@ -3,10 +3,10 @@
 ## STEP 1: Instructions for running the environment
 
     1. Make sure you have those things installed by typing in your terminal:
-        - node
+        - node (you can get node from here: https://www.npmjs.com/get-npm)
         - yarn
 
-    2. Install all the dependencies with: `yarn`
+    2. Install all the dependencies with: `yarn` (if you don't have yarn, install it here: https://yarnpkg.com/en/docs/install)
 
     3. Run your project with: `yarn start`
 
@@ -24,8 +24,8 @@
 
 ## STEP 4: Switch branch to go to the next exercise
 
-    1. To display the updated instruction, go to the branch `1_and_3/4-the-letter-extracting-modules` in github. The instruction (coming from the readme file) will be updated.
-    2. Checkout branch in your local repository (you can stash your changes before) `git checkout 1_and_3/4--the-letter-extracting-modules`
+    1. To display the updated instruction, go to the branch `1-and-3/4-the-letter-extracting-modules` in github. The instruction (coming from the readme file) will be updated.
+    2. Checkout branch in your local repository (you can stash your changes before) `git checkout 1-and-3/4-the-letter-extracting-modules`
     3. The branch content is updated.
 
 ## Want more info about this project structure? It's simple create-react-app boilerplate. Google it :)
