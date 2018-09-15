@@ -13,7 +13,7 @@ const confettiConfig = {
 }
 
 const Wand = ({ raised, spellCasting }) => {
-  const className = raised ? 'wand wandActive' : 'wand'
+  const className = raised ? 'wand wandRaised' : 'wand'
   return (
     <div className='wandContainer'>
       <img src={wand} className={className} alt='wand' />
