@@ -1,4 +1,4 @@
-##1 get data from API
+## Get data from API
 
 1. Check out `ComponentDidMount` method - the API call will execute after component will be created and mounted on the page.
 2. It's time to install React Dev Tools extension in your browser - do it! :)
