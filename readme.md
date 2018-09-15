@@ -5,3 +5,5 @@
 2. Come back to `Content/index.js` file and pass props as constants (e.g. fired=false, up=true). Check out all the cases. Flame is not firing? Are you sure you passed all the props down? ;)
 
 3. Add extra states to Content Component and make buttons work! :)
+
+4. Extra task: are you ahead of the group? Make the last `cast spell writing` on the bottom working ;)
