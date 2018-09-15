@@ -67,8 +67,8 @@ this.state = {
 ```
 
 Add two more listeners to the div surrounding wand. `onMouseEnter={()=>{this.setState(wandRaised: true)}}` will cause raising a wand a bit. Add the same thing for `onMouseLeave` but with changing the value of state to `false`.
-Pass prop `raised` to <Wand /> with a value of `this.state.wandRaised`.
+Pass prop `raised` to `<Wand />` with a value of `this.state.wandRaised`.
 
-6. Let's now go into the Wand component. The Wand is a function - it is not a class extending a component as the previous ones. Isn't it weird? Do you know the reason why? (Slide)
+6. Let's now go into the `Wand` component. The Wand is a function - it is not a class extending a component as the previous ones. Isn't it weird? Do you know the reason why? (Slide)
 
 7. Once your door toggle and confetti gets triggered and a wand is going up and down AND you know what's stateless component, you're ready to go next :)
