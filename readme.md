@@ -54,7 +54,7 @@ render() {
 
 This would allow us to open the door once. If we want to toggle the state of it, we can switch it from `<div onClick={()=> {this.setState(isDoorOpen: true)}}>` to  `<div onClick={()=> {this.setState(isDoorOpen: !this.state.isDoorOpen)}}>`. The `!` will negate the previous state.
 
-4. Do you remember the confetti module that was breaking? Now that it's working, let's have some fun! Add prop: `spellCasting` to the <Wand /> with a value of `this.state.doorOpen`. Try it in a browser.
+4. Do you remember the confetti module that was breaking? Now that it's working, let's have some fun! Add prop: `spellCasting` to the `<Wand />` with a value of `this.state.doorOpen`. Try it in a browser.
 
 
 5. So you get the basic idea of a state. Great! Let's add some more events to practice. Add state `wandRaised` to our constructor:
