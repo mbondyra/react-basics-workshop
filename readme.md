@@ -49,4 +49,4 @@
 
 5. It is THAT simple to use React. Let's go a bit deeper with rules that are applied to JSX. Open index-2.html file and start with exercises there. Once you solve one, uncomment line comments of the next one. We're here if you need help :)
 
-6. Once you finished, wait for a checkpoint and switch to the next branch called `1_the_letter`, we'll start the real fun now. I cannot wait!
+6. Once you finished, wait for a checkpoint and switch to the next branch called `1-the-letter`, we'll start the real fun now. I cannot wait!
