@@ -8,10 +8,9 @@
   width: 147px;
   margin: 20px auto;
   margin-left: 0px;
-  -webkit-perspective: 450;
   border-radius: 3px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  z-index:2;
 }
 
 .door {
@@ -27,6 +26,7 @@
   transition: 1s transform linear;
   transform-origin: left;
   cursor: pointer;
+  z-index: 1;
 }
 
 .doorOpen {

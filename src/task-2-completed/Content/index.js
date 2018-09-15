@@ -1,21 +1,20 @@
 import React, { Component } from "react";
-import letter from "./letter-uncovered.jpg";
 import "./style.css";
+import "./potions.css";
+import Welcome from '../Welcome/index'
+import Potion from '../Potion/index'
 
 class App extends Component {
   render() {
     return (
       <div className="App-content">
-        <div className="title">A letter to...</div>
-        <div className="message">
-          <span role="img" aria-label="padlock">
-            🔏
-          </span>{" "}
-          <br />
-          Hey! You got a letter from Hogwarts! <br />
-          Open it by changing the path to the img file to `letter-uncovered.jpg`
+        <Welcome who="Name" messageColor="#fff" />
+        <div className="potions">
+          <Potion label="veritaserum" color="green"/>
+          <Potion label="felis felisis" color="pink"/>
+          <Potion label="Amortentia" color="gold"/>
+          <Potion/>
         </div>
-        <img src={letter} className="letter" alt="letter" />
       </div>
     );
   }

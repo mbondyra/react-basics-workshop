@@ -2,18 +2,20 @@ import React, { Component } from "react";
 import "./style.css";
 import Welcome from "../Welcome/index";
 import Door from "../Door/index";
-import Wand from "../Wand";
+import Candle from '../Candle/index'
 
 class App extends Component {
+  
   constructor(){
-    super();
+    super()
     this.state = {
       doorOpen: false,
-      wandRaised: false
+      candleUp: false,
+      lightOn: false
     }
     this.toggleDoor = this.toggleDoor.bind(this)
-    this.raiseWand = this.raiseWand.bind(this)
-    this.lowerWand = this.lowerWand.bind(this)
+    this.toggleCandlePosition = this.toggleCandlePosition.bind(this)
+    this.toggleLight = this.toggleLight.bind(this)
   }
 
   toggleDoor(){
@@ -22,15 +24,15 @@ class App extends Component {
     })
   }
 
-  raiseWand(){
+  toggleCandlePosition(){
     this.setState({
-      wandRaised: true
+      candleUp: !this.state.candleUp
     })
   }
 
-  lowerWand(){
+  toggleLight(){
     this.setState({
-      wandRaised: false
+      lightOn: !this.state.lightOn
     })
   }
 
@@ -38,9 +40,22 @@ class App extends Component {
     return (
       <div className="App-content">
         <Welcome who="Ada" messageColor="#fff" />
-        <Door open={this.state.doorOpen}/>
-        <div onClick={this.toggleDoor} onMouseEnter={this.raiseWand} onMouseLeave={this.lowerWand}>
-          <Wand active={this.state.wandRaised}  spellCasting={this.state.doorOpen}/>
+        <Door open={this.state.doorOpen}>
+         <Candle fired={this.state.lightOn} up={this.state.candleUp}/>
+        </Door>
+        <div className="buttonsPanel">
+          <button onClick={this.toggleDoor}>
+            Alohomora!
+          </button>
+          <button onClick={this.toggleCandlePosition}>
+            Wingardium Leviosa!
+          </button>
+          <button onClick={this.toggleLight}>
+            Lumos!
+          </button>
+        </div>
+        <div className="lastSpell">
+           Last casted spell: Wingardium Leviosa
         </div>
       </div>
     );

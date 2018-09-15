@@ -6,10 +6,10 @@
 
 .App-content {
   position: fixed;
-  top: 50%;
+  top: 80px;
   left: 50%;
   width: 100%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 }
 
 .title{    
@@ -32,4 +32,29 @@
   top: 50%;
   left: 50%;
   transform: translate(50%, 50%);
+}
+
+button {
+  cursor: pointer;
+  background-color: #215c4b;
+  margin: 30px 4px 50px;
+  border: none;
+  color: white;
+  font: 12px/18px "Roboto Regular",Arial,sans;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 8px 24px;
+  transition: all .5s;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover{
+
+  background-color: #102e25;
+}
+
+.lastSpell {
+  color: black;
+  font-size: 24px;
 }
